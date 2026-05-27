@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>句子库管理后台</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 句子库管理后台</h1>
+        <div class="key-section">
+            <label>管理密钥：</label>
+            <input type="password" id="adminKey" placeholder="请输入管理员密钥">
+            <button id="loadBtn">加载句子库</button>
+        </div>
+        <div class="add-section">
+            <h3>添加新句子</h3>
+            <textarea id="newSentence" rows="2" placeholder="输入句子内容..."></textarea>
+            <button id="addBtn">添加句子</button>
+        </div>
+        <div class="list-section">
+            <h3>现有句子列表</h3>
+            <div id="sentenceList" class="sentence-list">
+                <p class="placeholder">请先输入密钥并点击“加载句子库”</p>
+            </div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>句子收藏馆 - 用户端</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 右上角区域（登录后显示） -->
+    <div class="top-bar">
+        <div id="welcome-area" style="display:none;">
+            <span id="topUsername"></span>
+            <button id="topLogoutBtn" class="small-logout">退出登录</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 未登录区域 -->
+        <div id="unauth-section" class="section">
+            <h2>登录 / 注册</h2>
+            <div class="form-group">
+                <label>用户名</label>
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <label>密码</label>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="button-group">
+                <button id="loginBtn">登录</button>
+                <button id="registerBtn">注册</button>
+            </div>
+            <div id="authMessage" class="message"></div>
+        </div>
+
+        <!-- 已登录区域（不再显示欢迎标题和退出按钮，它们已移到右上角） -->
+        <div id="auth-section" class="section" style="display:none;">
+            <div class="sentence-box">
+                <p id="sentenceContent">点击下方按钮随机获取句子</p>
+            </div>
+            <div class="button-group">
+                <button id="randomBtn">随机句子</button>
+            </div>
+            <hr>
+            <h3>上传你的句子</h3>
+            <div class="form-group">
+                <textarea id="newSentence" rows="3" placeholder="写一句有意义的话..."></textarea>
+            </div>
+            <div class="button-group">
+                <button id="uploadBtn">上传句子</button>
+            </div>
+            <div id="uploadMessage" class="message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(135deg, #5a9bcf, #3a7ca5);  /* 新背景色 */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;     /* 让绝对定位的 top-bar 相对 body 定位 */
+}
+
+/* 右上角区域 */
+.top-bar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+}
+#welcome-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    border-radius: 40px;
+    backdrop-filter: blur(5px);
+}
+#topUsername {
+    color: white;
+    font-weight: bold;
+}
+.small-logout {
+    background:  #64C2F8;
+    color: white;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.2s;
+}
+.small-logout:hover {
+    background: #4aa8e0;
+}
+
+/* 主体容器 - 扩大宽度 */
+.container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    padding: 50px 60px;
+    width: 90%;
+    max-width: 700px;   /* 比原来的500px更宽 */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #555;
+    margin: 20px 0 10px;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* 按钮组内的按钮样式（随机句子 / 上传句子 / 登录 / 注册） */
+.button-group button {
+    flex: 1;
+    background: #64C2F8;   /* 新颜色 */
+    color:  #fff;           /* 建议白色文字，也可保持深色 */
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button-group button:hover {
+    background:#4aa8e0;
+}
+
+/* 全局其他按钮（如有需要）会继承上面悬停，但退出按钮有独立样式，无影响 */
+button {
+    transition: background 0.2s;
+}
+
+.sentence-box {
+    background: white;
+    padding: 20px;
+    margin: 24px 0;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: #1f2937;
+    border: 1px solid #64C2F8;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #e2e8f0;
+}
+
+.message {
+    margin-top: 12px;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.message.error {
+    background: #fff5f5;
+    color: #c53030;
+    border: 1px solid #fc8181;
+}
+
+.message.success {
+    background: #f0fff4;
+    color: #2f855a;
+    border: 1px solid #9ae6b4;
+}
